@@ -1,0 +1,13 @@
+<wxs src="./first.wxs" module="first"></wxs>
+<view>
+  <radio-group bindchange="changeRadio">
+    <radio wx:for="{{heroName}}" wx:key="index" value="{{item}}">{{item}}</radio>
+  </radio-group>
+ <view wx:for="{{arr}}" wx:key="index" class="person">
+   <view class="mask" wx:if="{{nowType != '' && nowType!==item.hero_type && nowType!==item.hero_type2}}"></view>
+   <image class="pic" src="http://www.aiqianduan.com:56506/images/wzry/{{item.pic}}.jpg"></image>
+   <view class="name">
+    {{item.cname}}
+   </view>
+ </view>
+</view>

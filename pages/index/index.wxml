@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view>
+ <view wx:for="{{arr}}" wx:key="index" class="person">
+   <image class="pic" src="http://www.aiqianduan.com:56506/images/wzry/{{item.pic}}.jpg"></image>
+   <view class="name">
+    <view>英雄名字：{{item.cname}}</view>
+   <view>英雄类型：{{item.hero_type}}
+    <text wx:if="{{item.hero_type2!==undefined}}"> 、{{item.hero_type2}}</text>
+   </view>
+   <view>英雄口号：{{item.title}}</view>
+   </view>
+ </view>
+</view>
